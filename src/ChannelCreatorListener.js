@@ -133,7 +133,8 @@ ChannelCreatorListener.prototype._onClientMove = function(moveEvent) {
       return self
         ._createClosestChannel(self._options.channelId, info.client_nickname, pass, 5)
         .spread(function(channelInfo) {
-          return self._changeChannelIcon(channelInfo.cid, info.client_icon_id).return(channelInfo.cid);
+          return channelInfo.cid;
+          //return self._changeChannelIcon(channelInfo.cid, info.client_icon_id).return(channelInfo.cid);
         })
         .then(function(cid) {
           return self._moveClient(clid, cid, pass).return(cid);
