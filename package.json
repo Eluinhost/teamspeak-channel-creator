@@ -1,0 +1,18 @@
+{
+  "name": "teamspeak-channel-creator",
+  "version": "0.0.0",
+  "description": "Creates a channel for a user when the join a channel",
+  "main": "./src/index.js",
+  "keywords": [
+    "teamspeak",
+    "bot"
+  ],
+  "author": "Eluinhost",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^2.8.2",
+    "chance": "^0.8.0",
+    "lodash": "^2.4.1",
+    "node-teamspeak": "^1.0.10"
+  }
+}
