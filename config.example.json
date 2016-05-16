@@ -1,0 +1,15 @@
+{
+  "address": "uhc.gg",
+  "queryport": 10011,
+  "serverport": 9987,
+  "username": "serveradmin",
+  "botName": "BOT",
+  "password": "password",
+  "listenChannel": 107,
+  "channelId": 107,
+  "groupIds": [6],
+  "codec": 5,
+  "codec_quality": 10,
+  "channelGroupId": 5,
+  "noPermissionMessage": "You do not have permission to create a channel"
+}
