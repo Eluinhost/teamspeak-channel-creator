@@ -12,5 +12,8 @@
   "codec_quality": 10,
   "channelGroupId": 5,
   "channelType": "temporary",
+  "channelName": "{{username}}'s channel",
+  "channelTopic": "{{usernames}}'s channel",
+  "channelDescription": "{{username}}'s channel",
   "noPermissionMessage": "You do not have permission to create a channel"
 }

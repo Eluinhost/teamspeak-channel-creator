@@ -6,7 +6,8 @@ const config = require('./config.json');
 
 const createClosestChannel = (bot, parentId, username, password, maxAttempts) => {
     let attempt = 0;
-    let current = username;
+    const base = config.channelName.replace('{{username}}', username);
+    let current = base;
 
     const error = error => {
         console.error(error);
@@ -16,12 +17,12 @@ const createClosestChannel = (bot, parentId, username, password, maxAttempts) =>
         }
 
         attempt++;
-        current = username + attempt;
+        current = `${base} (${attempt})`;
 
         return run();
     };
 
-    const run = () => createChannel(bot, parentId, current, 'Channel for ' + current, 'Channel for ' + current, password).catch(error);
+    const run = () => createChannel(bot, parentId, current, config.channelTopic.replace('{{username}}', username), config.channelDescription.replace('{{username}}', username), password).catch(error);
 
     return run();
 };
