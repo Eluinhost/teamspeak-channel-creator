@@ -11,5 +11,6 @@
   "codec": 5,
   "codec_quality": 10,
   "channelGroupId": 5,
+  "channelType": "temporary",
   "noPermissionMessage": "You do not have permission to create a channel"
 }

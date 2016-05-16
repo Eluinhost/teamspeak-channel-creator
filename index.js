@@ -34,7 +34,7 @@ const createChannel = (bot, parentId, name, topic, description, password) => bot
     channel_password: password,
     channel_codec: config.codec,
     channel_codec_quality: config.codec_quality,
-    channel_flag_permanent: 1
+    ['channel_flag_' + config.channelType]: 1
 });
 
 const createForUser = Promise.coroutine(function * (bot, clid) {

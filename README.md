@@ -19,5 +19,6 @@ is sent to the user and they are also given the specified channel group
       "codec": 5,           // 0: Speex Narrowband 1: Speex Wideband 2: Speex Ultra-wideband 3: Celt Mono 4: Opus Voice 5: Opus Music
       "codec_quality": 10,
       "channelGroupId": 5,   // the channel group ID to assign after create
+      "channelType": "temporary", // permanent, semi_permanent, temporary
       "noPermissionMessage": "You do not have permission to create a channel"
     }
