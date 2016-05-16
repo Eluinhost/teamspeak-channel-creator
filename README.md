@@ -21,7 +21,7 @@ is sent to the user and they are also given the specified channel group
       "channelGroupId": 5,   // the channel group ID to assign after create
       "channelType": "temporary", // permanent, semi_permanent, temporary
       "channelName": "{{username}}'s channel", // name the channel will have
-      "channelTopic": "{{usernames}}'s channel", // topic the channel will have
+      "channelTopic": "{{username}}'s channel", // topic the channel will have
       "channelDescription": "{{username}}'s channel", // description the channel will have
       "noPermissionMessage": "You do not have permission to create a channel"
     }
