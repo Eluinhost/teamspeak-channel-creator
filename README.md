@@ -3,8 +3,12 @@ teamspeak-channel-creator
 
 Teamspeak bot for creating channels for user. When a user joins the 
 specific channel and has one of the server groups a channel will be
-created for them. Channels are permanent and passworded, the password
-is sent to the user and they are also given the specified channel group
+created for them. Channels are passworded, the password is sent to the 
+user and they are also given the specified channel group.
+
+Copy config.example.json to config.json and edit it to your liking. 
+
+config.json explanation:
 
     {
       "address": "uhc.gg",  // address to connect to
