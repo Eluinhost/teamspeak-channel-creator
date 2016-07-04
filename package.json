@@ -1,6 +1,6 @@
 {
   "name": "teamspeak-channel-creator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Creates a channel for a user when they join the channel",
   "main": "./src/index.js",
   "keywords": [
