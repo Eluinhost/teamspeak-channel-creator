@@ -45,13 +45,10 @@ const createForUser = Promise.coroutine(function * (bot, clid) {
 
     const { cid } = yield createClosestChannel(bot, config.channelId, client_nickname, password);
 
+    // Move to new channel
+    yield bot.joinChannel(cid, clid, password);
+
     yield Promise.join(
-        // Move to channel
-        bot._send('clientmove', {
-            clid: clid,
-            cid: cid,
-            pwd: password
-        }),
         // Add channel group to client
         bot._send('setclientchannelgroup', {
             cgid: config.channelGroupId,
@@ -61,6 +58,9 @@ const createForUser = Promise.coroutine(function * (bot, clid) {
         // Send password in PM
         bot.sendMessage(clid, `The password for your new channel is: ${password}`)
     );
+
+    // Move back to the listen channel
+    yield bot.joinChannel(config.listenChannel)
 });
 
 const sendError = (bot, clid, error, publicError = error) => {
